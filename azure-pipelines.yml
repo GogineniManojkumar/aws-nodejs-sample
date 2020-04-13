@@ -24,13 +24,13 @@ steps:
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)'
-    includeRootFolder: true
+    includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
     verbose: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/*.zip'
-    ArtifactName: 'build-$(Build.BuildId)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    ArtifactName: 'build-$(Build.BuildId).zip'
     publishLocation: 'Container'
