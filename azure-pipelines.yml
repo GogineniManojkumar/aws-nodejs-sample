@@ -41,3 +41,9 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/drop/terraform'
     OverWrite: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)/terraform'
+    ArtifactName: 'drop/terraform'
+    publishLocation: 'Container'
