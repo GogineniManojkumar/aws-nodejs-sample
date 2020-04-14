@@ -34,9 +34,3 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/collection_app.zip'
     publishLocation: 'Container'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/terraform'
-    ArtifactName: 'drop/terraform-new'
-    publishLocation: 'Container'
