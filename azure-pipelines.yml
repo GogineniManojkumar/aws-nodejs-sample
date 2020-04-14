@@ -35,13 +35,6 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/collection_app.zip'
     publishLocation: 'Container'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/terraform'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/drop/terraform'
-    OverWrite: true
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.SourcesDirectory)/terraform'
