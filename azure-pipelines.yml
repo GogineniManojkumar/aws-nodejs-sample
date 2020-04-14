@@ -34,3 +34,9 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/collection_app.zip'
     publishLocation: 'Container'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.SourcesDirectory)/terraform'
+    artifact: 'terraform'
+    publishLocation: 'pipeline'
+
