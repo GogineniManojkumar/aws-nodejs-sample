@@ -39,5 +39,5 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/terraform'
     Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/terraform'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/drop/terraform'
     OverWrite: true
