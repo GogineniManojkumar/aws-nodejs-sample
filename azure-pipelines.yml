@@ -38,5 +38,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.SourcesDirectory)/terraform'
-    ArtifactName: 'drop/terraform'
+    ArtifactName: 'drop/terraform-new'
     publishLocation: 'Container'
